@@ -3,6 +3,8 @@ const path = require('path');
 
 module.exports = { //  this tells Webpack where to start bundling your application code. It points to the index.tsx file in the src directory.
   entry: './src/index.tsx',
+  mode: 'development',
+  // mode: production,
   module: {
     rules: [
       {
@@ -20,7 +22,7 @@ module.exports = { //  this tells Webpack where to start bundling your applicati
   resolve: {
     extensions: ['.tsx', '.ts', '.js'], // this tells Webpack which extensions to resolve when encountering file imports without extensions 
                                         // specifying .tsx, .ts, and .js ensures Webpack can find your TypeScript and JavaScript files
-}, //error on this exact line under the brace Expression expected.ts(1109)
+},
   output: { // this section defines where the bundled code will be placed
     filename: 'bundle.js', // teh name of the bundled JavaScript file (bundle.js)
     path: __dirname + '/dist' // the output directory for the bundled files (./dist)

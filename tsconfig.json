@@ -6,7 +6,8 @@
       "target": "es6", // what ts transforms into
       "jsx": "react",
       "allowJs": true,
-      "allowSyntheticDefaultImports": true
+      "allowSyntheticDefaultImports": true, // this allowed me to import React seems neccesary
+      "moduleResolution":"node" // i guess i needed this for react-router-dom it doesnt seem like it should have worked but it did fix the error
     },
     "include": [
       "./src/**/*"
