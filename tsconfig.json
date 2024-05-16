@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/", // directs TypeScript to put the compiled JavaScript files into the ./dist/ directory
+      "noImplicitAny": true, // maintains type safety
+      "module": "es6", // latest JS verison
+      "target": "es6", // what ts transforms into
+      "jsx": "react",
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true
+    },
+    "include": [
+      "./src/**/*"
+    ]
+  }
