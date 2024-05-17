@@ -11,26 +11,20 @@ import Reservations from './pages/Reservations';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import './styles.css';
+import Layout from './components/Layout';
 
 const App: React.FC = () => {
   return (
     <Router>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/menu">Menu</Link></li>
-          <li><Link to="/reservations">Reservations</Link></li>
-          <li><Link to="/gallery">Gallery</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/reservations" element={<Reservations />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Layout> 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Layout>
     </Router>
   );
 };

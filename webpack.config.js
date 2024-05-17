@@ -15,7 +15,19 @@ module.exports = { //  this tells Webpack where to start bundling your applicati
       },
       {
         test: /\.css$/, //same as tsx
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader', 'postcss-loader']
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: 
+            {
+              name: '[path][name].[ext]',
+            }
+          } 
+        ]  
       }
     ]
   },
