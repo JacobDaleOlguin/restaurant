@@ -31,31 +31,31 @@ const Navbar: React.FC = () => {
 
 
   return (
-    <nav className="fixed h-10 top-0 left-0 w-full z-30 bg-gray-800 p-4 flex justify-between items-center">
-      <div className="text-white text-lg font-bold" style={{ position: 'relative', width: '200px' }}>
+    <nav className="fixed select-none top-0 left-0 w-full z-30 flex justify-between items-center p-4">
+      <div className="text-white relative border-white p-8 text-lg font-bold" style={{ position: 'relative', width: '200px' }}>
         <Link to="/"
           onMouseEnter={() => handleMouseEnter('restaurantName')}
           onMouseLeave={() => handleMouseLeave('restaurantName')}
-          className="relative block w-full">
-          <span className={`absolute inset-0 flex justify-center items-center transition-opacity duration-300 ${hoverStatus.restaurantName ? 'opacity-0' : 'opacity-100'}`}>
+          className="flex justify-center items-center w-full">
+          <span className={`absolute bg-gray-600 text-white inset-0 flex justify-center items-center transition-opacity duration-300${hoverStatus.restaurantName ? 'opacity-0' : 'opacity-100'}`}>
             Sigdang
           </span>
-          <span className={`absolute inset-0 flex justify-center text-amber-600 items-center transition-opacity duration-300 ${hoverStatus.restaurantName ? 'opacity-100' : 'opacity-0'}`}>
+          <span className={`absolute bg-gray-600 border border-amber-600 font-extrabold text-xl text-amber-600 inset-0 flex justify-center items-center transition-opacity duration-300 ${hoverStatus.restaurantName ? 'opacity-100' : 'opacity-0'}`}>
             식당
           </span>
         </Link>
       </div>
       <ul className="flex space-x-4">
         {(['home', 'menu', 'reservations', 'gallery', 'contact'] as const).map((item) => (
-          <li key={item} className="relative" style={{ width: '100px' }}>
+          <li key={item} className="relative p-8" style={{ width: '100px' }}>
             <Link to={`/${item === 'home' ? '' : item}`}
                   onMouseEnter={() => handleMouseEnter(item)}
                   onMouseLeave={() => handleMouseLeave(item)}
                   className="flex justify-center items-center w-full">
-              <span className={`absolute text-white inset-0 flex justify-center items-center transition-opacity duration-300 ${hoverStatus[item] ? 'opacity-0' : 'opacity-100'}`}>
+              <span className={`absolute bg-gray-600 text-white inset-0 flex justify-center items-center transition-opacity duration-300 ${hoverStatus[item] ? 'opacity-0' : 'opacity-100'}`}>
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </span>
-              <span className={`absolute font-bold text-amber-600 inset-0 flex justify-center items-center transition-opacity duration-300 ${hoverStatus[item] ? 'opacity-100' : 'opacity-0'}`}>
+              <span className={`absolute bg-gray-600 font-extrabold border border-amber-600 text-xl text-amber-600 inset-0 flex justify-center items-center transition-opacity duration-300 ${hoverStatus[item] ? 'opacity-100' : 'opacity-0'}`}>
                 {item === 'home' ? '홈' : item === 'menu' ? '메뉴' : item === 'reservations' ? '예약' : item === 'gallery' ? '갤러리' : '연락처'}
               </span>
             </Link>
