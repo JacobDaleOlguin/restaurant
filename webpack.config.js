@@ -46,6 +46,7 @@ module.exports = { //  this tells Webpack where to start bundling your applicati
     })
   ],
   devServer: { // this configures the built-in development server provided by Webpack
+    historyApiFallback: true, // page wouldnt refresh unless it was homepage if i dont have this
     static: {
       directory: path.join(__dirname, 'public'), // this sets the directory for serving static files during development (index html and others)
     },
