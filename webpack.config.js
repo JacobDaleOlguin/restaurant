@@ -18,7 +18,7 @@ module.exports = { //  this tells Webpack where to start bundling your applicati
         use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|ico)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -41,8 +41,9 @@ module.exports = { //  this tells Webpack where to start bundling your applicati
   },
   plugins: [ // his section defines plugins that can manipulate the build process or add functionality
     new HtmlWebPackPlugin({
-      template: './src/index.html' // this plugin injects your index.html file from the src directory into the final bundle
+      template: './src/index.html', // this plugin injects your index.html file from the src directory into the final bundle
                                    // it ensures your HTML file references the bundled JavaScript file correctly
+    
     })
   ],
   devServer: { // this configures the built-in development server provided by Webpack
