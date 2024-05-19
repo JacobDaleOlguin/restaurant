@@ -27,7 +27,6 @@ const translations: Record<Category, string> = {
 };
 
 const Menu: React.FC = () => {
-  // Optimized individual state hooks for hover detection
   const [hoverAppetizers, setHoverAppetizers] = useState(false);
   const [hoverMains, setHoverMains] = useState(false);
   const [hoverDesserts, setHoverDesserts] = useState(false);
