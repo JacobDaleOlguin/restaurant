@@ -57,36 +57,36 @@ const Gallery: React.FC = () => {
     lazyLoad: 'ondemand',
   };
 
-   return (
-    <div className="select-none w-full min-h-screen flex items-center justify-center pt-20"
+  return (
+    <div className="select-none pt-20 pb-12 w-full min-h-screen flex items-center justify-center"
          style={{
            backgroundImage: `url(${galleryCategories[0].imgSrc})`,
-           backgroundRepeat: 'no-repeat', // Prevent repeating the background image
-           backgroundSize: 'cover', // Ensure the background covers the entire container
-           backgroundPosition: 'center', // Center the background image
+           backgroundRepeat: 'no-repeat',
+           backgroundSize: 'cover',
+           backgroundPosition: 'center',
            filter: 'brightness(75%)'
          }}>
-      <div className="text-left w-1/3 p-10 bg-white bg-opacity-75 rounded-lg shadow-lg">
-        <h1 className="text-7xl font-bold text-gray-700 mb-6 hover:text-amber-600 hover:scale-105 transition-transform duration-300 ease-in-out">
+      <div className="text-left w-1/2 p-8 bg-white bg-opacity-75 rounded-lg shadow-lg">
+        <h1 className="text-5xl font-bold text-gray-700 mb-4 hover:text-amber-600 hover:scale-105 transition-transform duration-300 ease-in-out">
           Gallery
         </h1>
         <style>
           {`
             .slick-prev, .slick-next {
-              width: 50px; 
-              height: 50px; 
-              z-index: 100; // Ensure visibility over other elements
+              width: 40px; 
+              height: 40px; 
+              z-index: 100;
             }
             .slick-prev:before, .slick-next:before {
-              font-size: 50px; 
-              color: amber; // Match the hover color used elsewhere
+              font-size: 40px; 
+              color: amber;
               opacity: 1;
             }
             .slick-prev {
-              left: 10px;
+              left: 5px;
             }
             .slick-next {
-              right: 10px;
+              right: 5px;
             }
           `}
         </style>
@@ -97,9 +97,9 @@ const Gallery: React.FC = () => {
                 src={category.imgSrc}
                 alt={category.title}
                 className="w-full object-cover mx-auto"
-                style={{ height: '75vh' }}
+                style={{ height: '60vh' }}
               />
-              <h3 className="mt-2 text-center text-lg font-medium text-gray-900">{category.title}</h3>
+              <h3 className="mt-2 text-center text-md font-medium text-gray-900">{category.title}</h3>
             </div>
           ))}
         </Slider>
