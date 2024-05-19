@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,7 +15,7 @@ import Contact from './pages/Contact';
 import './styles.css';
 import Layout from './components/Layout';
 
-const ScrollToTop = () => {
+const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
