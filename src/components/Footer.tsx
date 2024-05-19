@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="text-center text-sm text-gray-400 pt-10 pb-4">
-                © 2024 Restaurant Name. All rights reserved.
+                © 2024 Sigdang - Jacob Olguin. All rights reserved.
             </div>
         </footer>
     );
